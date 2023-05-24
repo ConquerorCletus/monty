@@ -31,3 +31,15 @@ void stack_swap(stack_t **stack_head, unsigned int lineCount)
 	curr_node->n = curr_node->next->n;
 	curr_node->next->n = temp;
 }
+
+/**
+  *stack_nop- do nothing
+  *@head: pointer to stack head
+  *@lineCount: lineCount
+  *Return: void
+ */
+void stack_nop(stack_t **head, unsigned int lineCount)
+{
+	(void) lineCount;
+	(void) head;
+}

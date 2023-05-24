@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * stack_add - adds the top two elements of the stack.
- * @head: pointer to stack head
- * @lineCount: lineCount
- * Return: Void.
+ * stack_add - Adds the top two elements of the stack.
+ * @head: Pointer to the stack head
+ * @lineCount: Line number
+ * Return: void
  */
 void stack_add(stack_t **head, unsigned int lineCount)
 {

@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * stack_queue - prints the top
+ * stack_queue - sets the stack to queue mode
  * @head: stack head
  * @lineCount: lineCount
- * Return: no return
+ * Return: nothing
 */
 void stack_queue(stack_t **head, unsigned int lineCount)
 {
@@ -14,36 +14,36 @@ void stack_queue(stack_t **head, unsigned int lineCount)
 }
 
 /**
- * addqueue - add node to the tail stack
- * @n: new_value
- * @head: head of the stack
+ * addqueue - adds a node to the tail of the stack
+ * @head: stack head
+ * @n: new value to be added
  * Return: no return
 */
 void addqueue(stack_t **head, int n)
 {
-	stack_t *new_node, *aux;
+	stack_t *cell, *ptr;
 
-	aux = *head;
-	new_node = malloc(sizeof(stack_t));
-	if (new_node == NULL)
+	ptr = *head;
+	cell = malloc(sizeof(stack_t));
+	if (cell == NULL)
 	{
 		printf("Error\n");
 	}
-	new_node->n = n;
-	new_node->next = NULL;
-	if (aux)
+	cell->n = n;
+	cell->next = NULL;
+	if (ptr)
 	{
-		while (aux->next)
-			aux = aux->next;
+		while (ptr->next)
+			ptr = ptr->next;
 	}
-	if (!aux)
+	if (!ptr)
 	{
-		*head = new_node;
-		new_node->prev = NULL;
+		*head = cell;
+		cell->prev = NULL;
 	}
 	else
 	{
-		aux->next = new_node;
-		new_node->prev = aux;
+		ptr->next = cell;
+		cell->prev = ptr;
 	}
 }
