@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -22,6 +23,7 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
 /**
  * struct bus_s - variables -args, file, line content
  * @arg: value
@@ -30,6 +32,7 @@ typedef struct stack_s
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
+
 typedef struct bus_s
 {
 	char *arg;
@@ -38,6 +41,7 @@ typedef struct bus_s
 	int lifi;
 }  bus_t;
 extern bus_t bus;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
