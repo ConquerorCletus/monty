@@ -12,6 +12,7 @@ void stack_add(stack_t **head, unsigned int lineCount)
 	int len = 0, sum;
 
 	bus_t bus;
+
 	bus.file = NULL;
 
 	bus.content = NULL;
