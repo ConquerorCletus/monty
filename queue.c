@@ -10,7 +10,7 @@ void stack_queue(stack_t **head, unsigned int lineCount)
 {
 	(void)head;
 	(void)lineCount;
-	bus.lifi = 1;
+	top.lifi = 1;
 }
 
 /**

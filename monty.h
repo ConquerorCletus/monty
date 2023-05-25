@@ -25,7 +25,7 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct bus_s - variables -args, file, line content
+ * struct top_s - variables -args, file, line content
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
@@ -33,14 +33,14 @@ typedef struct stack_s
  * Description: carries values through the program
  */
 
-typedef struct bus_s
+typedef struct top_s
 {
 	char *arg;
 	FILE *file;
 	char *content;
 	int lifi;
-}  bus_t;
-extern bus_t bus;
+}  top_t;
+extern top_t top;
 
 /**
  * struct instruction_s - opcode and its function

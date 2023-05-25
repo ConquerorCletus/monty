@@ -34,7 +34,7 @@ int execute(char *content, stack_t **stack, unsigned int lineCount, FILE *file)
 	op_code = strtok(content, " \n\t");
 	if (op_code && op_code[0] == '#')
 		return (0);
-	bus.arg = strtok(NULL, " \n\t");
+	top.arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op_code)
 	{
 		if (strcmp(op_code, opst[i].opcode) == 0)

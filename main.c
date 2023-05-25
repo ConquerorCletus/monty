@@ -1,7 +1,7 @@
 #include "monty.h"
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-bus_t bus = {NULL, NULL, NULL, 0};
+top_t top = {NULL, NULL, NULL, 0};
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
-	bus.file = file;
+	top.file = file;
 	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	{
 		content = NULL;
 		read_line = getline(&content, &size, file);
-		bus.content = content;
+		top.content = content;
 		lineCount++;
 		if (read_line > 0)
 		{

@@ -9,5 +9,5 @@ void elem_stack(stack_t **head, unsigned int lineCount)
 {
 	(void)head;
 	(void)lineCount;
-	bus.lifi = 0;
+	top.lifi = 0;
 }

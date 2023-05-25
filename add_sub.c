@@ -16,8 +16,8 @@ void stack_sub(stack_t **head, unsigned int lineCount)
 	if (i < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", lineCount);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(top.file);
+		free(top.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -40,11 +40,11 @@ void stack_add(stack_t **head, unsigned int lineCount)
 	stack_t *tmp;
 	int len = 0, sum;
 
-	bus_t bus;
+	top_t top;
 
-	bus.file = NULL;
+	top.file = NULL;
 
-	bus.content = NULL;
+	top.content = NULL;
 
 	tmp = *head;
 	while (tmp)
@@ -55,10 +55,10 @@ void stack_add(stack_t **head, unsigned int lineCount)
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", lineCount);
-		if (bus.file != NULL)
-			fclose(bus.file);
-		if (bus.content != NULL)
-			free(bus.content);
+		if (top.file != NULL)
+			fclose(top.file);
+		if (top.content != NULL)
+			free(top.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

@@ -11,8 +11,8 @@ void stack_pint(stack_t **stack_head, unsigned int lineCount)
 	if (*stack_head == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", lineCount);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(top.file);
+		free(top.content);
 		free_stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
@@ -32,8 +32,8 @@ void stack_pop(stack_t **stack_head, unsigned int lineCount)
 	if (*stack_head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", lineCount);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(top.file);
+		free(top.content);
 		free_stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
