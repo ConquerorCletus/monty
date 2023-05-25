@@ -64,6 +64,7 @@ void stack_pop(stack_t **stack_head, unsigned int lineCount);
 void stack_push(stack_t **head, unsigned int number);
 void stack_swap(stack_t **stack_head, unsigned int lineCount);
 void stack_sub(stack_t **head, unsigned int lineCount);
+void stack_div(stack_t **head, unsigned int lineCount);
 int execute(char *content, stack_t **head, unsigned int lineCount, FILE *file);
 void addqueue(stack_t **head, int n);
 void free_stack(stack_t *head);
