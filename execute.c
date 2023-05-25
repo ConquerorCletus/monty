@@ -16,6 +16,7 @@ int execute(char *content, stack_t **stack, unsigned int lineCount, FILE *file)
 				{"swap", stack_swap},
 				{"add", stack_add},
 				{"nop", stack_nop},
+				{"sub", stack_sub},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
