@@ -71,21 +71,22 @@ int execute(char *content, stack_t **head, unsigned int lineCount, FILE *file);
 void addqueue(stack_t **head, int n);
 void free_stack(stack_t *head);
 void addnode(stack_t **head, int n);
+void stack_pstr(stack_t **head, unsigned int lineCount);
+void stack_pchar(stack_t **head, unsigned int lineCount);
+void stack_queue(stack_t **head, unsigned int lineCount);
+void stack_rotr(stack_t **head, __attribute__((unused)) unsigned int lineCount);
+void stack_rotl(stack_t **head, unsigned int lineCount);
 
 /**
  * char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
  * ssize_t getstdin(char **lineptr, int file);
  * char  *clean_line(char *content);
- * void stack_sub(stack_t **head, unsigned int lineCount);
- * void stack_div(stack_t **head, unsigned int lineCount);
- * void stack_mul(stack_t **head, unsigned int lineCount);
- * void stack_mod(stack_t **head, unsigned int lineCount);
- * void stack_pchar(stack_t **head, unsigned int lineCount);
- * void stack_pstr(stack_t **head, unsigned int lineCount);
- * void stack_rotl(stack_t **head, unsigned int lineCount);
- * void stack_rotr(stack_t **head, __attribute__((unused))
- * unsigned int lineCount);
- * void stack_queue(stack_t **head, unsigned int lineCount);
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * void f_stack(stack_t **head, unsigned int lineCount);
  */
 
