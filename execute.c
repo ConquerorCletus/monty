@@ -25,7 +25,6 @@ int execute(char *content, stack_t **stack, unsigned int lineCount, FILE *file)
 				{"rotl", stack_rotl},
 				{"rotr", stack_rotr},
 				{"queue", stack_queue},
-				{"stack", f_stack},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
